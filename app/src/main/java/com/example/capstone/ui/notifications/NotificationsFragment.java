@@ -87,6 +87,9 @@ public class NotificationsFragment extends Fragment implements OnMapReadyCallbac
     private void updateMarkers() {
         mMap.clear(); // 이전 마커 제거
 
+        //나중에 삭제해야할 구문!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        locations.add(new LatLng(37.541, 126.986));
+
         // 마커 추가
         for (int i = 0; i < locations.size(); i++) {
             LatLng location = locations.get(i);
