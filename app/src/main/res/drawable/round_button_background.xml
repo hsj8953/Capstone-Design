@@ -1,0 +1,5 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="oval">
+    <solid android:color="#00ffffff"/> <!-- 배경 색을 투명으로 설정 -->
+    <corners android:radius="20dp"/> <!-- 동그란 형태로 만들기 -->
+    <stroke android:width="0dp"/> <!-- 테두리 선 추가 -->
+</shape>
