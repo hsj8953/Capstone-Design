@@ -24,8 +24,6 @@ public class CompareFragment extends Fragment {
         binding = FragmentCompareBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textCompare;
-        compareViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
 

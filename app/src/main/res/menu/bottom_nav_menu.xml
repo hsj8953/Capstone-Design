@@ -18,7 +18,7 @@
 
     <item
         android:id="@+id/navigation_compare"
-        android:icon="@drawable/baseline_balance_24"
+        android:icon="@drawable/baseline_memory_24"
         android:title="@string/title_compare" />
 
     <item

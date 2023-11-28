@@ -37,15 +37,15 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-<!--            <TextView-->
-<!--                android:id="@+id/grouplisttxt"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="match_parent"-->
-<!--                android:hint="참여한 그룹이 없습니다."-->
-<!--                android:layout_gravity="center"-->
-<!--                android:gravity="center"-->
-<!--                android:textColorHint="#868e96"-->
-<!--                android:textSize="18dp"/>-->
+            <TextView
+                android:id="@+id/listtxt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="참여한 그룹이 없습니다."
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColorHint="#868e96"
+                android:textSize="18dp"/>
         </LinearLayout>
     </ScrollView>
     <View
@@ -55,7 +55,7 @@
 
 
     <android.widget.Button
-        android:id="@+id/btn_popup"
+        android:id="@+id/createpop"
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:layout_marginTop="50dp"

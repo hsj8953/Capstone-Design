@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.example.capstone.databinding.ActivityFirstBinding;
+import com.example.capstone.ui.chat.ChatFragment;
 
 import android.widget.Button;
 import android.widget.Toast;
@@ -38,23 +39,24 @@ public class FirstActivity extends AppCompatActivity {
         editText = findViewById(R.id.userid);
 
 
-        List<String> sliderItems = new ArrayList<>();
-            sliderItems.add("https://cdn.pixabay.com/photo/2019/12/26/10/44/horse-4720178_1280.jpg");
-            sliderItems.add("https://cdn.pixabay.com/photo/2020/11/04/15/29/coffee-beans-5712780_1280.jpg");
-            sliderItems.add("https://cdn.pixabay.com/photo/2020/11/10/01/34/pet-5728249_1280.jpg");
-            sliderItems.add("https://cdn.pixabay.com/photo/2020/12/21/19/05/window-5850628_1280.png");
-            sliderItems.add("https://cdn.pixabay.com/photo/2014/03/03/16/15/mosque-279015_1280.jpg");
+//        List<String> sliderItems = new ArrayList<>();
+//            sliderItems.add("https://cdn.pixabay.com/photo/2019/12/26/10/44/horse-4720178_1280.jpg");
+//            sliderItems.add("https://cdn.pixabay.com/photo/2020/11/04/15/29/coffee-beans-5712780_1280.jpg");
+//            sliderItems.add("https://cdn.pixabay.com/photo/2020/11/10/01/34/pet-5728249_1280.jpg");
+//            sliderItems.add("https://cdn.pixabay.com/photo/2020/12/21/19/05/window-5850628_1280.png");
+//            sliderItems.add("https://cdn.pixabay.com/photo/2014/03/03/16/15/mosque-279015_1280.jpg");
+//
+//        mBinding.vpImageSlider.setAdapter(new SliderAdapter(this, mBinding.vpImageSlider, sliderItems));
+//
+//        mBinding.vpImageSlider.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
+//            @Override
+//            public void onPageSelected(int position) {
+//                super.onPageSelected(position);
+//                sliderHandler.removeCallbacks(sliderRunnable);
+//                sliderHandler.postDelayed(sliderRunnable, 5000);
+//            }
+//        });
 
-        mBinding.vpImageSlider.setAdapter(new SliderAdapter(this, mBinding.vpImageSlider, sliderItems));
-
-        mBinding.vpImageSlider.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
-            @Override
-            public void onPageSelected(int position) {
-                super.onPageSelected(position);
-                sliderHandler.removeCallbacks(sliderRunnable);
-                sliderHandler.postDelayed(sliderRunnable, 5000);
-            }
-        });
 
         Button loginButton = findViewById(R.id.loginButton);
         loginButton.setOnClickListener(new View.OnClickListener() {
@@ -66,6 +68,14 @@ public class FirstActivity extends AppCompatActivity {
                     // 입력된 텍스트가 공백이 아닌 경우 MainActivity로 이동
                     Toast.makeText(FirstActivity.this, inputText + "님 어서오세요.", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(FirstActivity.this, MainActivity.class);
+
+                    // 데이터를 Intent에 추가
+                    intent.putExtra("userName", inputText);
+
+                    // ChatFragment로 전환하면서 Intent와 함께 전송
+                    ChatFragment chatFragment = new ChatFragment();
+                    chatFragment.setArguments(intent.getExtras());
+
                     startActivity(intent);
                 } else {
                     editText.setHintTextColor(getResources().getColor(android.R.color.holo_red_light, getTheme()));
@@ -75,30 +85,32 @@ public class FirstActivity extends AppCompatActivity {
         });
     }
 
+
+
     @Override
     protected void onDestroy() {
         super.onDestroy();
         mBinding = null;
     }
 
-    private Runnable sliderRunnable = new Runnable() {
-        @Override
-        public void run() {
-            mBinding.vpImageSlider.setCurrentItem(mBinding.vpImageSlider.getCurrentItem() + 1);
-        }
-    };
+//    private Runnable sliderRunnable = new Runnable() {
+//        @Override
+//        public void run() {
+//            mBinding.vpImageSlider.setCurrentItem(mBinding.vpImageSlider.getCurrentItem() + 1);
+//        }
+//    };
 
-    @Override
-    protected void onPause() {
-        super.onPause();
-        sliderHandler.removeCallbacks(sliderRunnable);
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        sliderHandler.postDelayed(sliderRunnable, 4000);
-    }
+//    @Override
+//    protected void onPause() {
+//        super.onPause();
+//        sliderHandler.removeCallbacks(sliderRunnable);
+//    }
+//
+//    @Override
+//    protected void onResume() {
+//        super.onResume();
+//        sliderHandler.postDelayed(sliderRunnable, 4000);
+//    }
 
 
 

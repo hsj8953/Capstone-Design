@@ -39,6 +39,9 @@
         <EditText
             android:id="@+id/group_name"
             android:layout_width="match_parent"
+            android:hint="그룹명을 입력하세요."
+            android:textSize="15dp"
+            android:inputType="text"
             android:layout_height="wrap_content"/>
     </LinearLayout>
     <!-- Notice -->
