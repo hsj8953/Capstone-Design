@@ -25,39 +25,24 @@ public class FirstActivity extends AppCompatActivity {
     private EditText editText;
     private Handler sliderHandler = new Handler();
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        // 액티비티 제목 표시줄 숨기기
         getSupportActionBar().hide();
+
+        // activity_first 레이아웃 설정
         setContentView(R.layout.activity_first);
 
+        // ActivityFirstBinding을 이용하여 레이아웃 설정
         mBinding = ActivityFirstBinding.inflate(getLayoutInflater());
         setContentView(mBinding.getRoot());
-//        txtResult = (TextView)findViewById(R.id.txtResult);
 
+        // EditText 초기화
         editText = findViewById(R.id.userid);
 
-
-//        List<String> sliderItems = new ArrayList<>();
-//            sliderItems.add("https://cdn.pixabay.com/photo/2019/12/26/10/44/horse-4720178_1280.jpg");
-//            sliderItems.add("https://cdn.pixabay.com/photo/2020/11/04/15/29/coffee-beans-5712780_1280.jpg");
-//            sliderItems.add("https://cdn.pixabay.com/photo/2020/11/10/01/34/pet-5728249_1280.jpg");
-//            sliderItems.add("https://cdn.pixabay.com/photo/2020/12/21/19/05/window-5850628_1280.png");
-//            sliderItems.add("https://cdn.pixabay.com/photo/2014/03/03/16/15/mosque-279015_1280.jpg");
-//
-//        mBinding.vpImageSlider.setAdapter(new SliderAdapter(this, mBinding.vpImageSlider, sliderItems));
-//
-//        mBinding.vpImageSlider.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
-//            @Override
-//            public void onPageSelected(int position) {
-//                super.onPageSelected(position);
-//                sliderHandler.removeCallbacks(sliderRunnable);
-//                sliderHandler.postDelayed(sliderRunnable, 5000);
-//            }
-//        });
-
-
+        // 로그인 버튼 설정 및 클릭 리스너 추가
         Button loginButton = findViewById(R.id.loginButton);
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -78,6 +63,7 @@ public class FirstActivity extends AppCompatActivity {
 
                     startActivity(intent);
                 } else {
+                    // 입력된 텍스트가 공백인 경우 사용자에게 메시지 및 힌트 제공
                     editText.setHintTextColor(getResources().getColor(android.R.color.holo_red_light, getTheme()));
                     Toast.makeText(FirstActivity.this, "아이디를 입력하세요.", Toast.LENGTH_SHORT).show();
                 }
@@ -85,44 +71,10 @@ public class FirstActivity extends AppCompatActivity {
         });
     }
 
-
-
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        // 메모리 누수 방지를 위해 바인딩 해제
         mBinding = null;
     }
-
-//    private Runnable sliderRunnable = new Runnable() {
-//        @Override
-//        public void run() {
-//            mBinding.vpImageSlider.setCurrentItem(mBinding.vpImageSlider.getCurrentItem() + 1);
-//        }
-//    };
-
-//    @Override
-//    protected void onPause() {
-//        super.onPause();
-//        sliderHandler.removeCallbacks(sliderRunnable);
-//    }
-//
-//    @Override
-//    protected void onResume() {
-//        super.onResume();
-//        sliderHandler.postDelayed(sliderRunnable, 4000);
-//    }
-
-
-
-
-//    @Override
-//    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-//        if(requestCode==1){
-//            if(resultCode==RESULT_OK){
-//                //데이터 받기
-//                String result = data.getStringExtra("result");
-//                txtResult.setText(result);
-//            }
-//        }
-//    }
 }

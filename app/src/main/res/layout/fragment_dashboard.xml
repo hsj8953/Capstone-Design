@@ -1,39 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.dashboard.DashboardFragment">
-    <LinearLayout
-        android:id="@+id/country_layout"
+    tools:context=".ui.dashboard.DashboardFragment"
+    android:orientation="vertical"
+    android:id="@+id/dashboard"
+    android:background="@color/white">
+
+    <HorizontalScrollView
+        android:background="@color/white"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:orientation="horizontal">
-        <!--        <Button-->
-        <!--            android:id="@+id/plus"-->
-        <!--            android:layout_width="70dp"-->
-        <!--            android:layout_height="60dp"-->
-        <!--            android:background="@drawable/plus_btn"/>-->
-    </LinearLayout>
+        android:scrollbars="none"
+        android:layout_height="49dp">
+        <LinearLayout
+            android:id="@+id/country_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" />
+    </HorizontalScrollView>
+
+    <View
+        android:background="#66bdbdbd"
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:id="@+id/days_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+        </LinearLayout>
+    </HorizontalScrollView>
 
     <ScrollView
-        android:layout_marginTop="80dp"
         android:layout_width="match_parent"
-        android:layout_height="570dp">
+        android:layout_height="340dp">
         <LinearLayout
             android:id="@+id/place_layout"
             android:layout_width="match_parent"
-            android:layout_height="300dp"
+            android:layout_height="match_parent"
             android:orientation="vertical"
             android:layout_margin="20dp">
+            <TextView
+                android:layout_marginTop="150dp"
+                android:id="@+id/no_place"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="장소를 입력해 주세요."
+                android:textSize="22dp"/>
         </LinearLayout>
     </ScrollView>
-    <TextView
-        android:id="@+id/no_place"
-        android:layout_gravity="center"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="장소를 입력하여 주세요"
-        android:textSize="30dp"/>
-</FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/placeAddDelete"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"></LinearLayout>
+
+</LinearLayout>

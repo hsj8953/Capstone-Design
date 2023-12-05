@@ -15,7 +15,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="Test"
+            android:text="여행가자"
             android:textSize="25dp"
             android:textColor="@color/white"
             android:textFontWeight="600"
@@ -44,7 +44,7 @@
                         android:id="@+id/tv_name1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="name"
+                        android:text="공진영"
                         android:textColor="#333333"
                         android:layout_marginLeft="16dp"/>
 
@@ -52,7 +52,7 @@
                         android:id="@+id/tv_msg1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="채팅테스트1"
+                        android:text="여행 어디로 갈까요?"
                         android:layout_below="@+id/tv_name1"
                         android:layout_marginLeft="16dp"
                         android:padding="12dp"
@@ -63,7 +63,7 @@
                         android:id="@+id/tv_time1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="13:35"
+                        android:text="21:35"
                         android:textSize="12sp"
                         android:layout_toRightOf="@+id/tv_msg1"
                         android:layout_marginLeft="8dp"
@@ -83,7 +83,7 @@
                         android:id="@+id/tv_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="name"
+                        android:text="김민우"
                         android:textColor="#333333"
                         android:layout_alignParentRight="true"
                         android:layout_marginRight="16dp"/>
@@ -92,7 +92,7 @@
                         android:id="@+id/tv_msg"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="내 채팅내역"
+                        android:text="어디든지 좋아"
                         android:layout_below="@+id/tv_name"
                         android:layout_marginRight="16dp"
                         android:layout_alignParentRight="true"
@@ -104,7 +104,7 @@
                         android:id="@+id/tv_time"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="13:35"
+                        android:text="21:35"
                         android:textSize="12sp"
                         android:layout_toLeftOf="@+id/tv_msg"
                         android:layout_marginRight="8dp"
@@ -113,7 +113,161 @@
 
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="75dp">
 
+                <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tv_name2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="최준현"
+                        android:textColor="#333333"
+                        android:layout_marginLeft="16dp"/>
+
+                    <TextView
+                        android:id="@+id/tv_msg2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="일본 갈까?"
+                        android:layout_below="@+id/tv_name2"
+                        android:layout_marginLeft="16dp"
+                        android:padding="12dp"
+                        android:maxWidth="250dp"
+                        android:background="@drawable/back_et_othermsgbox"
+                        android:textColor="#333333"/>
+                    <TextView
+                        android:id="@+id/tv_time2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="21:35"
+                        android:textSize="12sp"
+                        android:layout_toRightOf="@+id/tv_msg2"
+                        android:layout_marginLeft="8dp"
+                        android:layout_alignBottom="@id/tv_msg2"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="75dp">
+
+                <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tv_name3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="하세진"
+                        android:textColor="#333333"
+                        android:layout_marginLeft="16dp"/>
+
+                    <TextView
+                        android:id="@+id/tv_msg3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="일본 좋지"
+                        android:layout_below="@+id/tv_name3"
+                        android:layout_marginLeft="16dp"
+                        android:padding="12dp"
+                        android:maxWidth="250dp"
+                        android:background="@drawable/back_et_othermsgbox"
+                        android:textColor="#333333"/>
+                    <TextView
+                        android:id="@+id/tv_time3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="21:35"
+                        android:textSize="12sp"
+                        android:layout_toRightOf="@+id/tv_msg3"
+                        android:layout_marginLeft="8dp"
+                        android:layout_alignBottom="@id/tv_msg3"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="75dp">
+
+                <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tv_name4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="김재영"
+                        android:textColor="#333333"
+                        android:layout_marginLeft="16dp"/>
+
+                    <TextView
+                        android:id="@+id/tv_msg4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="일본 어디요?"
+                        android:layout_below="@+id/tv_name4"
+                        android:layout_marginLeft="16dp"
+                        android:padding="12dp"
+                        android:maxWidth="250dp"
+                        android:background="@drawable/back_et_othermsgbox"
+                        android:textColor="#333333"/>
+                    <TextView
+                        android:id="@+id/tv_time4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="21:36"
+                        android:textSize="12sp"
+                        android:layout_toRightOf="@+id/tv_msg4"
+                        android:layout_marginLeft="8dp"
+                        android:layout_alignBottom="@id/tv_msg4"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="75dp">
+
+                <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tv_name5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="석지안"
+                        android:textColor="#333333"
+                        android:layout_marginLeft="16dp"/>
+
+                    <TextView
+                        android:id="@+id/tv_msg5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="오사카?"
+                        android:layout_below="@+id/tv_name5"
+                        android:layout_marginLeft="16dp"
+                        android:padding="12dp"
+                        android:maxWidth="250dp"
+                        android:background="@drawable/back_et_othermsgbox"
+                        android:textColor="#333333"/>
+                    <TextView
+                        android:id="@+id/tv_time5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="21:36"
+                        android:textSize="12sp"
+                        android:layout_toRightOf="@+id/tv_msg5"
+                        android:layout_marginLeft="8dp"
+                        android:layout_alignBottom="@id/tv_msg5"/>
+                </RelativeLayout>
+            </LinearLayout>
 
         </LinearLayout>
     </ScrollView>

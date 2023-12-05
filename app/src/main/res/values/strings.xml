@@ -3,6 +3,6 @@
     <string name="title_home">Home</string>
     <string name="title_plan">Plan</string>
     <string name="title_chat">Chat</string>
-    <string name="title_compare">Compare</string>
+    <string name="title_compare">Recommend</string>
     <string name="title_map">Map</string>
 </resources>

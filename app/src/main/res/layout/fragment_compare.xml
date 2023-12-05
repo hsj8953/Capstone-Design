@@ -4,7 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".ui.compare.CompareFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="AI 추천"
+            android:textSize="25dp"
+            android:textColor="@color/black"
+            android:textFontWeight="600"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"/>
+    </LinearLayout>
+    <View
+        android:background="#66bdbdbd"
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -13,29 +33,24 @@
         <TextView
             android:id="@+id/text_compare"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
-            android:textSize="15dp"
-            android:text="
-                1일차 \n
-                아침: 호텔에서 아침 식사를 즐기고 오사카 성을 방문해보세요.\n
-                점심: 오사카 성 근처의 맛집에서 오사카의 유명한 음식 중 하나인 '오코노미야키' 혹은 '타코야키'를 맛보세요.\n
-                오후: 도톤보리 지역으로 이동하여 쇼핑 및 거리 음식을 즐기세요. 그리고 나중에 신세카이를 방문하여 거리 음식과 랜드마크를 감상하세요.\n
-                저녁: 도톤보리에서 오사카의 밤을 즐기며 맛있는 음식을 즐기거나 술집을 방문하세요.\n\n
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:text="Day 1:\n\n
+아침: 도톤보리 지역에서 오사카의 유명한 음식을 즐기고 오사카 성을 방문하세요.\n
+오후: 신사이바시 지역에서 쇼핑을 즐기고, 구스테하우스 파티오에서 저녁 식사를 즐기세요.\n\n
+Day 2:\n\n
+아침: 우메다 지역에서 쇼핑을 하거나 스카이 빌딩에서 오사카의 아름다운 전망을 감상하세요.\n
+오후: 텐노지 동물원을 방문하고, 신오사카에서 역사적인 장소를 탐험하세요.\n
+저녁: 도톤보리 지역에서 맛있는 오사카 음식을 즐기세요.\n\n
+Day 3:\n\n
+아침: 오사카 수족관에서 다양한 해양 생물을 관찰하세요.\n
+오후: 우메다 스카이 빌딩에서 일몰을 감상하고, 도톤보리의 번화가를 즐기세요.\n
+저녁: 오사카에서 유명한 레스토랑 중 하나에서 저녁을 즐기세요."
 
-                2일차\n
-                아침: 신오사카 지역으로 이동하여 한국에서 유명한 드라마 촬영지인 '야마노테센'을 구경하세요.\n
-                점심: 신세카이에서 오사카 특유의 '퓨겔'를 맛볼 수 있는 레스토랑에서 식사를 즐기세요.\n
-                오후: 오사카 과학 박물관이나 오사카 수족관 등 지역의 유명한 박물관 중 하나를 방문해보세요.\n
-                저녁: 오사카의 특색 있는 음식 중 하나인 '쿠시카츠'를 맛볼 수 있는 전통적인 음식점에서 저녁을 즐기세요.\n\n
-
-                3일차\n
-                아침: 난바 지역에서 쇼핑을 하거나 오사카의 유명한 차이나타운 '신세카이'를 방문하세요.\n
-                점심: 난바 근처의 맛집에서 '우동'이나 '라멘'을 맛보세요.\n
-                오후: 오사카의 랜드마크인 '유니버설 스튜디오 재팬'을 방문해 놀고 즐기세요.\n
-                저녁: 마지막 날을 기념하여 현지 음식을 맛볼 수 있는 레스토랑에서 식사를 즐기세요.\n"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

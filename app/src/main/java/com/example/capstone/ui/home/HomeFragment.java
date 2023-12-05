@@ -33,19 +33,21 @@ public class HomeFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater,
                              @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        // 기존의 코드를 그대로 유지합니다.
+        // 기존 코드 유지
         HomeViewModel homeViewModel =
                 new ViewModelProvider(this).get(HomeViewModel.class);
 
         if (binding == null) {
+            // binding이 null인 경우, FragmentHomeBinding을 사용하여 레이아웃 설정
             binding = FragmentHomeBinding.inflate(inflater, container, false);
             View root = binding.getRoot();
 
+            // 팝업을 열기 위한 버튼 클릭 리스너 설정
             Button openPopupButton = root.findViewById(R.id.createpop);
-
             openPopupButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    // PopupCreateActivity를 열기 위한 Intent 생성 및 시작
                     Intent intent = new Intent(getActivity(), PopupCreateActivity.class);
                     startActivityForResult(intent, YOUR_REQUEST_CODE);
                 }
@@ -53,7 +55,7 @@ public class HomeFragment extends Fragment {
 
             return root;
         } else {
-            // binding이 이미 존재하는 경우, 기존의 View를 반환하여 화면에 표시합니다.
+            // binding이 이미 존재하는 경우, 기존의 View 반환하여 화면에 표시
             return binding.getRoot();
         }
     }
@@ -62,20 +64,20 @@ public class HomeFragment extends Fragment {
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == YOUR_REQUEST_CODE && resultCode == Activity.RESULT_OK) {
-            // 팝업 액티비티에서 전달된 데이터 받기
+            // 팝업 액티비티에서 전달된 데이터 수신
             String receivedData = data.getStringExtra("groupName");
             Log.d("ReceivedData", "Received Data: " + receivedData);
 
-            // 데이터가 null이 아닌 경우에만 처리
+            // 수신된 데이터가 null이 아닌 경우 처리
             if (receivedData != null) {
-                // LayoutInflater를 사용하여 list_item.xml을 View로 변환
+                // list_item.xml을 View로 변환
                 View listItem = LayoutInflater.from(getContext()).inflate(R.layout.list_item, null);
 
-                // TextView 중에서 groupname을 찾아서 값을 설정합니다.
+                // groupname TextView 찾아 값 설정
                 TextView groupNameTextView = listItem.findViewById(R.id.groupname);
                 groupNameTextView.setText(receivedData);
 
-                // 기존에 있는 리스트 텍스트 숨기기
+                // 기존 리스트 텍스트 숨기기
                 TextView listTextView = getView().findViewById(R.id.listtxt);
                 listTextView.setVisibility(View.GONE);
 
@@ -88,10 +90,10 @@ public class HomeFragment extends Fragment {
         }
     }
 
-
     @Override
     public void onDestroyView() {
         super.onDestroyView();
+        // 바인딩 해제하여 메모리 누수 방지
         binding = null;
     }
 }
